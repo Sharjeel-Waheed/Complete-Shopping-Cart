@@ -17,7 +17,7 @@ const Login = () => {
             const response = await allowUser(username, password);
             if (response.token) {
                 localStorage.setItem('token', response.token);
-                navigate('/home');
+                navigate('/');
             } else {
                 setError('Login failed. Please enter a correct username or password.');
             }

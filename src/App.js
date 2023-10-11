@@ -1,5 +1,5 @@
 import "./App.css";
-import Navigate from "./Navigate";
+import Navigate from "./Navigation/Navigate";
 
 function App() {
   return (<>
