@@ -15,6 +15,7 @@ const Login = () => {
         e.preventDefault();
         try {
             const response = await allowUser(username, password);
+            console.log(response);
             if (response.token) {
                 localStorage.setItem('token', response.token);
                 navigate('/');

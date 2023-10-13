@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export const allowUser = async (username, password) => {
   try {
-    const response = await axios.post('https://dummyjson.com/auth/login', {
+    const response = await axios.post('https://fakestoreapi.com/auth/login', {
       username: username,
       password: password,
     });
@@ -19,12 +19,11 @@ export const allowUser = async (username, password) => {
   }
 };
 
-export const getProducts = async () => {
-  try {
-    const response = await axios.get('https://dummyjson.com/products');
-    return response.data;
-  } catch (error) {
-    console.error('An error occurred while fetching products', error);
-    return { error: 'An error occurred while fetching products' };
-  }
-};
+export const getProducts = () => axios.get('https://fakestoreapi.com/products');
+export const getCategories = () => axios.get('https://fakestoreapi.com/products/categories');
+
+export const getSpecificProducts = (category) => {
+  const url = `https://fakestoreapi.com/products/category/${category}`
+
+  return axios.get(url);
+}
