@@ -17,7 +17,7 @@ const ProductDetails = () => {
             position: "bottom-right",
         });
 
-        navigate('/cart');
+        
     };
 
     // const showCart = () => {

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { allowUser } from "./Pages/Service";
 import "./NavBar.css";
 import MenuLogo from "../../src/Icons/icons8-menu-64.png"
 function NavBar() {
@@ -11,15 +10,8 @@ function NavBar() {
 
 
   const handleLogOut = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await allowUser();
-      localStorage.removeItem('token', response.token);
-      navigate('/login');
-
-    } catch (err) {
-      console.error(err);
-    }
+    localStorage.removeItem('token');
+    navigate('/login');
   };
 
   return (
