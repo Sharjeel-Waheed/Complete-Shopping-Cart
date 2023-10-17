@@ -1,0 +1,55 @@
+.Add-Container {
+    max-width: 300px;
+    margin-top: 20px auto; 
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .Add-Form {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin-top: 40vh; 
+    margin-left: 0;
+
+  }
+  
+  .Label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: black;
+  }
+  
+  .Input,
+  .textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    color: rgb(31, 31, 31)
+  }
+  
+  .Add-Product-Button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .Add-Product-Button:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (max-width: 768px) {
+    .Add-Container {
+      max-width: 100%;
+    }
+  }
+  

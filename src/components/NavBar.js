@@ -66,6 +66,18 @@ function NavBar() {
             </li>
 
             <li className="nav-item">
+              <NavLink
+                exact
+                to="/new-Product"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Add A Product
+              </NavLink>
+            </li>
+
+            <li className="nav-item">
               <button id="Logout-btn"
                 onClick={handleLogOut}>Logout</button>
             </li>

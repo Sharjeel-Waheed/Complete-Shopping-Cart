@@ -60,8 +60,3 @@ const Login = () => {
 }
 
 export default Login
-
-
-
-// username: 'kminchelle',
-//     password: '0lelplR',

@@ -20,9 +20,9 @@ const ProductDetails = () => {
         
     };
 
-    // const showCart = () => {
-    //     navigate('/cart');
-    // };
+    const showCart = () => {
+        navigate('/cart');
+    };
 
     return (
         <>
@@ -35,7 +35,7 @@ const ProductDetails = () => {
                 <p className='product-price'>Price : ${productDetail.price}</p>
                 <p className='product-description'>Details : {productDetail.description}</p>
                 <button onClick={() => addToCart(productDetail)}>Add To Cart</button>
-                {/* <button onClick={showCart}>View Cart</button> */}
+                <button onClick={showCart}>View Cart</button>
             </div>
         </>
     );

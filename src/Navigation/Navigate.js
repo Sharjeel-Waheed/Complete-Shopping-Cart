@@ -7,6 +7,7 @@ import Cart from '../components/Pages/Cart';
 import Home from '../components/Pages/Home';
 import Contact from '../components/Pages/Contact';
 import PageNotFound from '../components/Pages/PageNotFound';
+import AddProduct from '../components/Pages/AddProduct';
 
 const Navigate = () => {
   return (<>
@@ -39,6 +40,14 @@ const Navigate = () => {
               <Contact />
             </PrivateRoute>
           } />
+
+        <Route path="/new-Product"
+          element={
+            <PrivateRoute>
+              <AddProduct />
+            </PrivateRoute>
+          } />
+          
         <Route path="/*"
           element={
             <PrivateRoute>

@@ -7,9 +7,10 @@ const Cart = () => {
     const dispatch = useDispatch();
     const cartItems = useSelector((state) => state?.data?.cart);
 
-    const handleDelete = (id) => {
+    const handleDelete = (index) => {
         const updatedCart = cartItems.filter(
-            (cartItems) => cartItems !== id
+            (item, i) => i !== index 
+            // Using 'i' for comparison
         );
         dispatch({ type: 'REMOVE_ITEM', payload: updatedCart });
     }
@@ -41,7 +42,7 @@ const Cart = () => {
                                         src={item?.image} alt={item?.title} />
                                 </td>
                                 <td>${item?.price}</td>
-                                <td><button className='Del-btn' onClick={() => handleDelete(item)}>Remove</button></td>
+                                <td><button className='Del-btn' onClick={() => handleDelete(index)}>Remove</button></td>
                             </tr>
                         ))}
                     </tbody>
